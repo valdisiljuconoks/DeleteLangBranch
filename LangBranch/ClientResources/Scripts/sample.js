@@ -18,17 +18,11 @@
     ContentTreeStoreModel
 ) {
 
-    return declare("alloy.sample", [_Module, ContentTreeStoreModel], {
-        initialize: function() {
-            var target = ContentTreeStoreModel;
+    return declare("alloy/sample", [_Module], {
+        initialize: function () {
+            this.inherited(arguments);
 
-            aspect.after(target, "pasteItem", function(result) {
-                alert("test");
-            });
-        },
-
-        pasteItem: function() {
-            alert("adsf");
+            // asdf
         }
     });
 });
